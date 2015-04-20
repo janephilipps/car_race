@@ -7,7 +7,7 @@ class Car
 	end
 
 	def accelerate=(accelerate)
-
+		@speed = @speed + accelerate
 	end
 
 	def 
