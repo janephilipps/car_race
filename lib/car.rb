@@ -5,4 +5,10 @@ class Car
 	def initialize(speed)
 		@speed = speed
 	end
+
+	def accelerate=(accelerate)
+
+	end
+
+	def 
 end
