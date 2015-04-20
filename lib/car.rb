@@ -3,12 +3,11 @@ class Car
 	attr_accessor :speed
 
 	def initialize(speed)
-		@speed = speed
+		@speed = 0
 	end
 
 	def accelerate=(accelerate)
-		@speed = @speed + accelerate
+		@speed += accelerate
 	end
 
-	def 
 end
