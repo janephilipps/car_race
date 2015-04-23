@@ -28,3 +28,9 @@ class Race
 		end
 	end
 end
+
+puts race = Race.new
+puts race.winner
+puts race.winner.speed
+puts race.loser
+puts race.loser.speed

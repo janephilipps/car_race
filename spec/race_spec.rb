@@ -1,36 +1,44 @@
 require 'spec_helper'
 
 describe Race do
-	# Instantiate two cars when we initialize a race
-	# it '#initialize' do
-	# 	race = Race.new
-	# 	expect(race.car1.speed + race.car2.speed).to eq 0
-	# end
+	let(:race) { Race.new }
 
-	# Instantiate two cars and accelerate when we initialize a race
-	it '#initialize' do
-		race = Race.new
-		expect(race.car1.speed).not_to eq 0
+	describe '#initialize' do
+		# Instantiate two cars when we initialize a race
+		# it 'instantiates two new cars' do
+		# 	expect(race.car1.speed + race.car2.speed).to eq 0
+		# end
+
+		# Instantiate two cars and accelerate when we initialize a race
+		it 'checks that cars have accelerated' do
+			expect(race.car1.speed).not_to eq 0
+		end
+
 	end
 
-	it '#winner' do
-		race = Race.new
+	describe '#winner' do
+
+		it 'winner is a car' do
+			expect(race.winner).to be_a Car
+		end
+
+
+		it 'winner speed is greater than loser speed' do
 		expect(race.winner.speed > race.loser.speed).to be_truthy
+		end
+
 	end
 
-	it '#winner' do
-		race = Race.new
-		expect(race.winner).to be_a Car
-	end
+	describe '#loser' do
 
-	it '#loser' do
-		race = Race.new
-		expect(race.loser.speed < race.winner.speed).to be_truthy
-	end
+		it '#loser' do
+			expect(race.loser).to be_a Car
+		end
 
-	it '#loser' do
-		race = Race.new
-		expect(race.loser).to be_a Car
+		it '#loser' do
+			expect(race.loser.speed < race.winner.speed).to be_truthy
+		end
+		
 	end
 
 end
