@@ -29,6 +29,4 @@ describe Car do
 		end
 	end
 
-	
-
 end

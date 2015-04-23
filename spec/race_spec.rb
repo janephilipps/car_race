@@ -24,7 +24,7 @@ describe Race do
 
 
 		it 'winner speed is greater than loser speed' do
-		expect(race.winner.speed > race.loser.speed).to be_truthy
+			expect(race.winner.speed > race.loser.speed).to be_truthy
 		end
 
 	end
